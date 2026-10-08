@@ -1,4 +1,4 @@
 .hero h1 .title-line{color:var(--text)}
 .portrait-photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;border:1px solid var(--line);box-shadow:var(--shadow)}
+.portrait-placeholder[hidden]{display:none!important}
 .contact-list b{font-weight:400;color:var(--muted)}
-
