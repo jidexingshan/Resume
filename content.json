@@ -1,0 +1,18 @@
+{
+  "profile": {"name":"你的姓名","initials":"YN","title":"一名探索未知的研究者","intro":"目前就读于你的学校 · 你的专业。关注研究方向 A 与研究方向 B，喜欢把复杂问题变成清晰、可验证的答案。","school":"你的学校","major":"你的专业","period":"202X — 至今","languages":"中 / EN","email":"yourname@example.com","phone":"+86 138 0000 0000","location":"中国 · 你的城市","photo":""},
+  "experiences": [
+    {"date":"202X.06 — 202X.09","type":"实习","role":"职位名称","org":"公司 / 实验室名称","summary":"一句话说明你负责的问题、采用的方法和产生的影响。","highlights":["主导或参与的关键工作成果","协作方式、工具或技术栈"]},
+    {"date":"202X.01 — 202X.05","type":"项目经历","role":"职位名称","org":"组织名称","summary":"补充另一段能体现能力边界、责任感或跨团队协作的经历。","highlights":["解决了什么具体问题","最终交付了什么结果"]}
+  ],
+  "research": [
+    {"letter":"A","type":"代表项目","title":"项目标题：用一句话说明研究主题","description":"介绍研究背景、你的核心贡献与阶段性成果。","meta":"","tags":["关键词一","方法二","工具三"],"link":"","linkLabel":"项目详情"},
+    {"letter":"B","type":"论文","title":"论文题目 / Paper Title","description":"用两三句话概括论文的核心发现和你的贡献。","meta":"你的姓名，合作者姓名。期刊 / 会议名称，202X。","tags":[],"link":"","linkLabel":"论文链接"},
+    {"letter":"C","type":"研究进行中","title":"正在探索的研究问题","description":"简述当前关注的方向、已有进展，以及你希望与哪些领域的研究者交流。","meta":"","tags":[],"link":"","linkLabel":"了解更多"}
+  ],
+  "interests": [
+    {"title":"摄影","description":"记录光线、城市和日常生活中的细小变化。"},
+    {"title":"阅读","description":"偏爱科技、人文与传记，也持续整理阅读笔记。"},
+    {"title":"运动","description":"跑步 / 羽毛球 / 徒步，请替换成你的真实爱好。"}
+  ]
+}
+
