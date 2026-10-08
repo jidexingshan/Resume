@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>简历内容管理</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <header class="topbar"><div><span class="mark">R.</span><strong>简历内容管理</strong></div><a href="./" target="_blank" rel="noopener">查看公开主页</a></header>
+  <main>
+    <section class="login-card" id="login-panel">
+      <p class="kicker">OWNER ACCESS</p><h1>连接你的 GitHub 仓库</h1>
+      <p>使用仅授权给 <code>jidexingshan/Resume</code>、且具有 Contents 读写权限的 GitHub Fine-grained token。凭证只保留在当前浏览器会话中。</p>
+      <label>GitHub Token<input id="token-input" type="password" autocomplete="off" placeholder="github_pat_…"></label>
+      <div class="row"><button id="connect-button" class="primary">连接并加载内容</button><a class="help" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">创建安全令牌</a></div>
+      <p class="hint">不要使用 GitHub 密码。建议只选择该仓库，并授予 Repository permissions → Contents → Read and write。</p>
+    </section>
+
+    <section id="editor" hidden>
+      <div class="editor-head"><div><p class="kicker">LIVE CONTENT</p><h1>编辑你的主页</h1><p>保存后，公开网站通常会在 1–3 分钟内更新。</p></div><button id="disconnect-button" class="ghost">断开连接</button></div>
+
+      <form id="resume-form">
+        <section class="panel"><div class="panel-title"><span>01</span><div><h2>个人信息</h2><p>首页首屏和联系方式</p></div></div>
+          <div class="fields two">
+            <label>姓名<input data-profile="name"></label><label>姓名缩写<input data-profile="initials" maxlength="4"></label>
+            <label class="wide">个人标题<input data-profile="title"></label><label class="wide">个人简介<textarea data-profile="intro" rows="3"></textarea></label>
+            <label>学校<input data-profile="school"></label><label>专业<input data-profile="major"></label>
+            <label>学习阶段<input data-profile="period"></label><label>工作语言<input data-profile="languages"></label>
+            <label>邮箱<input data-profile="email" type="email"></label><label>手机号<input data-profile="phone"></label>
+            <label class="wide">所在地<input data-profile="location"></label>
+          </div>
+          <div class="upload-box"><div><strong>个人照片</strong><p id="photo-name">尚未上传</p></div><label class="file-button">选择照片<input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp"></label></div>
+        </section>
+
+        <section class="panel"><div class="panel-title"><span>02</span><div><h2>实习与工作经历</h2><p>支持添加、排序前后顺序和删除</p></div><button type="button" class="add" data-add="experiences">添加经历</button></div><div id="experiences-editor" class="repeat-list"></div></section>
+        <section class="panel"><div class="panel-title"><span>03</span><div><h2>科研项目与论文</h2><p>第一项会以大卡片展示</p></div><button type="button" class="add" data-add="research">添加项目</button></div><div id="research-editor" class="repeat-list"></div></section>
+        <section class="panel"><div class="panel-title"><span>04</span><div><h2>兴趣爱好</h2><p>展示工作之外的你</p></div><button type="button" class="add" data-add="interests">添加兴趣</button></div><div id="interests-editor" class="repeat-list compact"></div></section>
+      </form>
+
+      <div class="savebar"><div id="status" role="status">内容已加载，可以开始编辑。</div><button id="save-button" class="primary">保存并发布</button></div>
+    </section>
+  </main>
+  <template id="experience-template"><article class="repeat-card"><div class="card-top"><strong>经历</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>时间<input data-key="date"></label><label>类型<input data-key="type"></label><label>职位<input data-key="role"></label><label>机构<input data-key="org"></label><label class="wide">简介<textarea data-key="summary" rows="3"></textarea></label><label class="wide">成果要点（每行一条）<textarea data-key="highlights" rows="3"></textarea></label></div></article></template>
+  <template id="research-template"><article class="repeat-card"><div class="card-top"><strong>科研 / 论文</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>标识字母<input data-key="letter" maxlength="2"></label><label>类型<input data-key="type"></label><label class="wide">标题<input data-key="title"></label><label class="wide">简介<textarea data-key="description" rows="3"></textarea></label><label class="wide">作者、期刊等信息<input data-key="meta"></label><label>关键词（用逗号分隔）<input data-key="tags"></label><label>链接<input data-key="link" type="url"></label><label>链接文字<input data-key="linkLabel"></label></div></article></template>
+  <template id="interest-template"><article class="repeat-card"><div class="card-top"><strong>兴趣</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>名称<input data-key="title"></label><label>说明<input data-key="description"></label></div></article></template>
+  <script src="admin.js"></script>
+</body>
+</html>
+
