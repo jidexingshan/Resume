@@ -11,7 +11,7 @@
     "email": "yourname@example.com",
     "phone": "+86 138 0000 0000",
     "location": "中国 · 你的城市",
-    "photo": ""
+    "photo": "assets/profile.jpg"
   },
   "experiences": [
     {
