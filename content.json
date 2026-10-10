@@ -11,7 +11,8 @@
     "email": "zhaoqichao0210@163.com",
     "phone": "+86 15137369830",
     "location": "中国 · 南京",
-    "photo": "assets/profile.jpg"
+    "photo": "assets/profile.jpg",
+    "photoVersion": 1791621703961
   },
   "experiences": [
     {
@@ -39,7 +40,8 @@
         "工具三"
       ],
       "link": "",
-      "linkLabel": "项目详情"
+      "linkLabel": "项目详情",
+      "codeUrl": ""
     },
     {
       "letter": "B",
@@ -49,7 +51,8 @@
       "meta": "你的姓名，合作者姓名。期刊 / 会议名称，202X。",
       "tags": [],
       "link": "",
-      "linkLabel": "论文链接"
+      "linkLabel": "论文链接",
+      "codeUrl": ""
     },
     {
       "letter": "C",
@@ -59,7 +62,8 @@
       "meta": "",
       "tags": [],
       "link": "",
-      "linkLabel": "了解更多"
+      "linkLabel": "了解更多",
+      "codeUrl": ""
     },
     {
       "letter": "D",
@@ -69,7 +73,8 @@
       "meta": "",
       "tags": [],
       "link": "",
-      "linkLabel": ""
+      "linkLabel": "",
+      "codeUrl": ""
     }
   ],
   "interests": [
