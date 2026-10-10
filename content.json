@@ -1,16 +1,16 @@
 {
   "profile": {
     "name": "赵启超",
-    "initials": "YN",
+    "initials": "ZQC",
     "title": "一名探索未知的研究者",
-    "intro": "目前就读于你的学校 · 你的专业。关注研究方向 A 与研究方向 B，喜欢把复杂问题变成清晰、可验证的答案。",
-    "school": "你的学校",
-    "major": "你的专业",
+    "intro": "东南大学 · 计算机科学与技术。弱监督学习 多模态，喜欢把复杂问题变成清晰、可验证的答案。",
+    "school": "东南大学",
+    "major": "计算机科学与技术",
     "period": "202X — 至今",
     "languages": "中 / EN",
-    "email": "yourname@example.com",
-    "phone": "+86 138 0000 0000",
-    "location": "中国 · 你的城市",
+    "email": "zhaoqichao0210@163.com",
+    "phone": "+86 15137369830",
+    "location": "中国 · 南京",
     "photo": "assets/profile.jpg"
   },
   "experiences": [
