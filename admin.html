@@ -31,11 +31,11 @@
             <label>邮箱<input data-profile="email" type="email"></label><label>手机号<input data-profile="phone"></label>
             <label class="wide">所在地<input data-profile="location"></label>
           </div>
-          <div class="upload-box"><div><strong>个人照片</strong><p id="photo-name">尚未上传</p></div><label class="file-button">选择照片<input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp"></label></div>
+          <div class="upload-box"><div><strong>个人照片</strong><p id="photo-name">尚未上传 · 支持 JPG、PNG、WebP，原图小于 10 MB</p></div><label class="file-button">选择并裁剪照片<input id="photo-input" type="file" accept="image/jpeg,image/png,image/webp"></label></div>
         </section>
 
         <section class="panel"><div class="panel-title"><span>02</span><div><h2>实习与工作经历</h2><p>支持添加、排序前后顺序和删除</p></div><button type="button" class="add" data-add="experiences">添加经历</button></div><div id="experiences-editor" class="repeat-list"></div></section>
-        <section class="panel"><div class="panel-title"><span>03</span><div><h2>科研项目与论文</h2><p>第一项会以大卡片展示</p></div><button type="button" class="add" data-add="research">添加项目</button></div><div id="research-editor" class="repeat-list"></div></section>
+        <section class="panel"><div class="panel-title"><span>03</span><div><h2>科研项目与论文</h2><p>所有项目同等大小，并列展示</p></div><button type="button" class="add" data-add="research">添加项目</button></div><div id="research-editor" class="repeat-list"></div></section>
         <section class="panel"><div class="panel-title"><span>04</span><div><h2>兴趣爱好</h2><p>展示工作之外的你</p></div><button type="button" class="add" data-add="interests">添加兴趣</button></div><div id="interests-editor" class="repeat-list compact"></div></section>
       </form>
 
@@ -43,9 +43,9 @@
     </section>
   </main>
   <template id="experience-template"><article class="repeat-card"><div class="card-top"><strong>经历</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>时间<input data-key="date"></label><label>类型<input data-key="type"></label><label>职位<input data-key="role"></label><label>机构<input data-key="org"></label><label class="wide">简介<textarea data-key="summary" rows="3"></textarea></label><label class="wide">成果要点（每行一条）<textarea data-key="highlights" rows="3"></textarea></label></div></article></template>
-  <template id="research-template"><article class="repeat-card"><div class="card-top"><strong>科研 / 论文</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>标识字母<input data-key="letter" maxlength="2"></label><label>类型<input data-key="type"></label><label class="wide">标题<input data-key="title"></label><label class="wide">简介<textarea data-key="description" rows="3"></textarea></label><label class="wide">作者、期刊等信息<input data-key="meta"></label><label>关键词（用逗号分隔）<input data-key="tags"></label><label>链接<input data-key="link" type="url"></label><label>链接文字<input data-key="linkLabel"></label></div></article></template>
+  <template id="research-template"><article class="repeat-card"><div class="card-top"><strong>科研 / 论文</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>标识字母<input data-key="letter" maxlength="2"></label><label>类型<input data-key="type"></label><label class="wide">标题<input data-key="title"></label><label class="wide">简介<textarea data-key="description" rows="3"></textarea></label><label class="wide">作者、期刊等信息<input data-key="meta"></label><label>关键词（用逗号分隔）<input data-key="tags"></label><label>详情链接<input data-key="link" type="url"></label><label>详情链接文字<input data-key="linkLabel"></label><label class="wide">代码仓库链接（GitHub / GitLab / Gitee）<input data-key="codeUrl" type="url" placeholder="https://github.com/…"></label></div></article></template>
   <template id="interest-template"><article class="repeat-card"><div class="card-top"><strong>兴趣</strong><button type="button" class="remove">删除</button></div><div class="fields two"><label>名称<input data-key="title"></label><label>说明<input data-key="description"></label></div></article></template>
+  <dialog id="crop-dialog" aria-labelledby="crop-title"><div class="crop-head"><div><p class="kicker">PHOTO CROP</p><h2 id="crop-title">裁剪个人照片</h2></div><button type="button" id="crop-cancel-top" class="ghost" aria-label="关闭裁剪窗口">关闭</button></div><p>拖动照片调整位置；选择比例并放大到合适的构图。</p><div class="crop-stage"><canvas id="crop-canvas" aria-label="照片裁剪预览"></canvas></div><div class="crop-controls"><label>裁剪比例<select id="crop-ratio"><option value="original">原始比例</option><option value="4:5">竖版 4:5</option><option value="1:1">正方形 1:1</option><option value="3:2">横版 3:2</option></select></label><label>缩放<input id="crop-zoom" type="range" min="1" max="3" step="0.01" value="1"></label></div><div class="crop-actions"><button type="button" id="crop-cancel" class="ghost">取消</button><button type="button" id="crop-apply" class="primary">使用裁剪后的照片</button></div></dialog>
   <script src="admin.js"></script>
 </body>
 </html>
-
